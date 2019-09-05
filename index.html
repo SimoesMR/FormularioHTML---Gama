@@ -8,17 +8,26 @@
 		
 		<h1>Base 64</h1>
 		<form>
+			<!--Criando textBox-->
 			<label for="Texto">Texto para Decodificar: </label>
-			<input id="codificar" type="text" name="TextDec">
+			<input id="codificar" type="text" size="50"/>
 			<br>
 			<br>
-			<button id="codificador" class="caixo-texto" >DECODIFICAR</button>
+			<!--Criando Button-->
+			<button id="codificador" class="caixo-texto" onclick="ButtonDecod();" >DECODIFICAR</button>
+			<br>
+			<br>
 		</form>
 	</center>
 	<script type="text/javascript">
 		
-		var codificado = document.getElementById('codificado');
-		
+		function ButtonDecod(){
+			//Variavel para receber o que foi escrito na textBox
+			var palCodif = document.getElementById('codificar').value;
+			//Metodo atob para decodificar
+			var palDecof = atob(palCodif);
+			alert(palDecof);
+		}
 	</script>
 </body>
 </html>
